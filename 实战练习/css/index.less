@@ -1,0 +1,155 @@
+@import './base.less';
+@import url(color.less);
+
+body{
+  //min-width: 475px;
+}
+
+
+#menu{
+  //background-color: skyblue;
+  //overflow: hidden;
+ .container{
+
+
+     ul{
+       text-align: center;
+       //overflow: hidden;
+       //width: 100%;
+
+       li{
+
+         overflow: hidden;
+         transition: height 1s linear;
+         float: left;
+         margin-top: 10px;
+         list-style: none;
+         min-height: 0;
+         a{
+            text-decoration: none;
+           img{
+
+             width: 50px;
+             height: 50px;
+           }
+           span{
+             color: #5a5a5a;
+             margin-top: 5px;
+             font-size: 16px;
+             line-height: 26px;
+             display: block;
+             margin-top:10px;
+
+           }
+         }
+       }
+       li:nth-last-of-type(-n+4){
+
+         display: block;
+         height: 0;
+
+       }
+     }
+   }
+
+}
+#recommend{
+  .recommend-title{
+    a{
+      font-size: 24px;
+      background-color:@base-bgc-color;
+      color:#fff;
+      display: block;
+      height: 35px;
+      line-height: 35px;
+      padding-left: 5px;
+      text-decoration: none;
+      position: relative;
+    }
+    a:after{
+      content: "";
+      width: 23px;
+      height: 23px;
+      position: absolute;
+      right:10px;
+      top:50%;
+      transform: translateY(-50%);
+      background:url("../images/more.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+
+    }
+  }
+  .recommend-content{
+    .media{
+      padding: 5px;
+      .media-left{
+        padding-left: 4px;
+        a{
+          img{
+            display: block;
+            width: 99px;
+            height: 100px;
+
+          }
+        }
+      }
+      .media-body{
+        font-size: 18px;
+        position: relative;
+        //padding-top: 15px;
+        //margin: 5px;
+
+        span{
+          color:#333;
+        }
+        .nicePrice{
+          color: @base-bgc-color;
+        }
+        a{
+          width: 100%;
+          display: block;
+          position: relative;
+          position: absolute;
+          bottom:10px;
+          color:#a1a1a1;
+          font-size: 14px;
+          text-decoration: none;
+          span{
+
+            position: absolute;
+            right:0;
+
+            background: url("../images/ic_comment.png");
+            padding-left: 20px;
+            background-size: 15px 15px;
+            background-repeat: no-repeat;
+          }
+        }
+
+      }
+    }
+  }
+  .recommend-more{
+    background-color: #f2f2f2;
+
+    height: 64px;
+    position: relative;
+    a{
+      margin:0 10px;
+      width:95%;
+      position: absolute;
+      top:48%;
+      transform: translateY(-50%);
+      text-align: center;
+      text-decoration: none;
+      height: 30px;
+      line-height: 30px;
+      background-color: #f8f8f8;
+      border:1px solid #ddd;
+      border-radius:5px;
+      color:#5a5a5a;
+    }
+  }
+}
+

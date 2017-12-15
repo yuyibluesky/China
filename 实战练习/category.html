@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="./css/common_section.less"/>
+    <link rel="stylesheet/less" href="./css/category.less"/>
+    <script src="./lib/less/less.js"></script>
+    <script src="./lib/html5shiv/html5shiv.min.js"></script>
+    <script src="./lib/respond/respond.js"></script>
+    <script type='text/html' id='catagory-title'>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            {{each result as value i}}
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading{{}}">
+                            <h4 class="panel-title">
+                                <!-- 点击的a标签的href值与父父元素的id值相同-->
+                                <a  class="collapsed" data-title-my-id="{{value.titleId}}" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{i}}" aria-expanded="true" aria-controls="collapse{{}}">
+                                    {{value.title}}
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse{{i}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading{{}}">
+                            <div class="panel-body"></div>
+                        </div>
+                    </div>
+            {{/each}}
+            </div>
+    </script>
+    <script type="text/html" id='twochild'>
+        <div class='row'>
+        {{each result as value i}}
+
+            <div class="col-xs-4">
+                <a href="category_product_list.html?categoryid={{value.categoryId}}">{{value.category}}</a>
+
+            </div>
+
+
+        {{/each}}
+        </div>
+</script>
+</head>
+
+<body>
+<header id=header>
+    <!--<a href="#" class="header-logo">-->
+        <!--<img src="images/header_logo.png" alt=""/>-->
+    <!--</a>-->
+    <!--<a href="#" class="header-app">-->
+        <!--<img src="images/header_app.png" alt=""/>-->
+    <!--</a>-->
+</header>
+<section id="search">
+    <!--<form action="">-->
+        <!--<input type="search" placeholder="请输入要查询的商品名称" required/><span></span>-->
+        <!--<button value="搜索">搜索</button>-->
+    <!--</form>-->
+</section>
+<section id="category">
+
+        <!--<div class="panel panel-default">-->
+            <!--<div class="panel-heading" role="tab" id="headingOne">-->
+                <!--<h4 class="panel-title">-->
+                    <!--&lt;!&ndash; 点击的a标签的href值与父父元素的id值相同&ndash;&gt;-->
+                    <!--<a  class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">-->
+                        <!--title1-->
+                    <!--</a>-->
+                <!--</h4>-->
+            <!--</div>-->
+            <!--<div id="collapseOne" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">-->
+                <!--<div class="panel-body">-->
+                   <!--<div class='row'>-->
+                       <!--<div class="col-xs-4">-->
+                           <!--<a href="#">平板电脑</a>-->
+                       <!--</div>-->
+                       <!--<div class="col-xs-4">-->
+                           <!--<a href="#">平板电脑</a>-->
+                       <!--</div>-->
+                       <!--<div class="col-xs-4">-->
+                           <!--<a href="#">平板电脑</a>-->
+                       <!--</div>-->
+                       <!--<div class="col-xs-4">-->
+                           <!--<a href="#">平板电脑</a>-->
+                       <!--</div>-->
+
+                       <!--<div class="col-xs-4">-->
+                           <!--<a href="#">平板电脑</a>-->
+                       <!--</div>-->
+                       <!--<div class="col-xs-4">-->
+                           <!--<a href="#">平板电脑</a>-->
+                       <!--</div>-->
+
+                   <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+
+
+    <!--</div>-->
+</section>
+
+<footer id="footer">
+    <!--<div class="footer-title">-->
+        <!--<a href="#">登录</a>-->
+        <!--<a href="#">注册</a>-->
+        <!--<a class='backTop' href="javascript:goTop()">返回顶部</a>-->
+    <!--</div>-->
+    <!--<div class="footer-msg">-->
+        <!--<a href="#"><span>手机APP下载</span>慢慢买手机版-掌上比价平台 </a><br/>-->
+        <!--<a href="#">m.manmanbuy.com</a>-->
+    <!--</div>-->
+</footer>
+
+
+</body>
+<script src='./lib/jquery/jquery.min.js'></script>
+<script src='./lib/bootstrap/js/bootstrap.js'></script>
+<script src='./lib/template/template.js'></script>
+<script src='./js/common_section.js'></script>
+<script src='./js/category.js'></script>
+
+</html>

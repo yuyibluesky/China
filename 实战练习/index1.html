@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="./css/common_section.less"/>
+    <link rel="stylesheet/less" href="./css/index.less"/>
+    <script src="./lib/less/less.js"></script>
+    <script src="./lib/html5shiv/html5shiv.min.js"></script>
+    <script src="./lib/respond/respond.js"></script>
+</head>
+
+<body>
+<header  id=header>
+    <!--<a href="#" class="header-logo">-->
+        <!--<img src="images/header_logo.png" alt=""/>-->
+    <!--</a>-->
+    <!--<a href="#" class="header-app">-->
+        <!--<img src="images/header_app.png" alt=""/>-->
+    <!--</a>-->
+</header>
+<section id="search">
+    <!--<form action="">-->
+        <!--<input type="search" placeholder="请输入要查询的商品名称" required/><span></span>-->
+        <!--<button value="搜索">搜索</button>-->
+    <!--</form>-->
+</section>
+<section id="menu">
+    <div class="container">
+
+    </div>
+</section>
+<section id="recommend">
+    <div class="recommend-title">
+        <a href="#">
+            超值折扣推荐
+        </a>
+    </div>
+    <div class="recommend-content">
+        <!--<div class="media">-->
+            <!--<div class="media-left">-->
+                <!--<a href="#">-->
+                    <!--<img class="media-object" src="./images/product_info.jpg" alt="...">-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="media-body" class="clearfix">-->
+                <!--<span>超值液晶电视</span>-->
+                <!--<span class="nicePrice">5000包邮(26-10-17)</span>-->
+                <!--<a href="#">天猫旗舰店|10-26 14:15</a>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="media">-->
+            <!--<div class="media-left">-->
+                <!--<a href="#">-->
+                    <!--<img class="media-object" src="./images/product_info.jpg" alt="...">-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="media-body" class="clearfix">-->
+                <!--<span>超值液晶电视</span>-->
+                <!--<span class="nicePrice">5000包邮(26-10-17)</span>-->
+                <!--<a href="#">天猫旗舰店|10-26 14:15</a>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="media">-->
+            <!--<div class="media-left">-->
+                <!--<a href="#">-->
+                    <!--<img class="media-object" src="./images/product_info.jpg" alt="...">-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="media-body" class="clearfix">-->
+                <!--<span>超值液晶电视</span>-->
+                <!--<span class="nicePrice">5000包邮(26-10-17)</span>-->
+                <!--<a href="#">天猫旗舰店|10-26 14:15</a>-->
+            <!--</div>-->
+
+        <!--</div>-->
+
+    </div>
+    <div class="recommend-more">
+
+        <a href="#">更多优惠信息>></a>
+
+    </div>
+    <div class="recommend-title">
+        <a href="#">
+            品牌排行
+        </a>
+    </div>
+
+</section>
+<footer id="footer">
+    <!--<div class="footer-title">-->
+        <!--<a href="#">登录</a>-->
+        <!--<a href="#">注册</a>-->
+        <!--<a class='backTop' href="javascript:goTop()">返回顶部</a>-->
+    <!--</div>-->
+    <!--<div class="footer-msg">-->
+        <!--<a href="#"><span>手机APP下载</span>慢慢买手机版-掌上比价平台 </a><br/>-->
+        <!--<a href="#">m.manmanbuy.com</a>-->
+    <!--</div>-->
+</footer>
+
+
+</body>
+<script src='./lib/jquery/jquery.min.js'></script>
+<script src='./lib/template/template.js'></script>
+<script src='./js/common_section.js'></script>
+<script src='./js/index.js'></script>
+<script type="text/html" id="menu-list">
+    <div class="row">
+        <ul>
+        {{each result as value i}}
+                <li class="col-xs-3">
+                    <a href="{{value.titlehref}}">
+                        {{#value.img}}
+                        <p>{{value.name}}</p>
+                    </a>
+                </li>
+
+        {{/each}}
+       </ul>
+    </div>
+</script>
+<script type='text/html' id='recommend-template'>
+    {{each result as value i}}
+
+    <div class="media">
+        <div class="media-left">
+            <a href="#">
+                <!--<img class="media-object" src="./images/product_info.jpg" alt="...">-->
+                {{#value.productImg2}}
+            </a>
+        </div>
+        <div class="media-body" class="clearfix">
+            <span>{{value.productName}}</span>
+            <span class="nicePrice">{{value.productPinkage}}</span>
+            <a href="#">{{value.productFrom}}|{{value.productTime}}
+                <span>{{value.productComCount}}</span>
+            </a>
+        </div>
+    </div>
+    {{/each}}
+</script>
+</html>

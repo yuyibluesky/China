@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="./css/common_section.less"/>
+    <link rel="stylesheet/less" href="./css/category_product_list.less"/>
+    <script src="./lib/less/less.js"></script>
+    <script src="./lib/html5shiv/html5shiv.min.js"></script>
+    <script src="./lib/respond/respond.js"></script>
+</head>
+<script type="text/html" id='product-list'>
+
+        {{each result as value i}}
+
+        <div class="media">
+            <div class="media-left">
+                <a href="category_product_detail.html?productid={{value.productId}}">
+
+                    {{#value.productImg}}
+                </a>
+            </div>
+            <div class="media-body" class="clearfix">
+                <span>{{value.productName}}</span>
+                <div class="nicePrice">{{value.productPrice}}</div>
+                <a href="#">{{value.productQuote}}
+                    <span>{{value.productCom}}</span>
+                </a>
+            </div>
+        </div>
+        {{/each}}
+
+
+
+</script>
+<body>
+<header id=header>
+
+</header>
+<section id="search">
+
+</section>
+<section id='product'>
+    <div id='product-item'>
+    <!--<div class="media">-->
+        <!--<div class="media-left">-->
+        <!--<a href="#">-->
+        <!--<img class="media-object" src="./images/product_info.jpg" alt="...">-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--<div class="media-body" class="clearfix">-->
+        <!--<span>超值液晶电视</span>-->
+        <!--<div class="nicePrice">5000包邮(26-10-17)</div>-->
+        <!--<a href="#">天猫旗舰店|10-26 14:15</a>-->
+        <!--</div>-->
+    </div>
+    <div id='product-page'>
+        <a class='prev' href="">上一页</a>
+        <div class='optionpage'>
+            <select name="" id=""></select>
+        </div>
+        <a class='next-page' href="">下一页</a>
+    </div>
+</section>
+
+<footer id="footer">
+
+</footer>
+
+
+</body>
+<script src='./lib/jquery/jquery.min.js'></script>
+<script src='./lib/template/template.js'></script>
+<script src='./js/common_section.js'></script>
+<script src='./js/category_product_list.js'></script>
+
+</html>

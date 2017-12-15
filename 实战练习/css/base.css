@@ -1,0 +1,21 @@
+html, body,p,div,h1,h2,h3,h4,h5,h6,ul,li,img{
+    margin:0;
+    padding: 0;
+    border:0;
+}
+ul{
+    list-style: none;
+}
+ a{
+    text-decoration: none;
+
+}
+.clearfix:before,
+.clearfix:after{
+    content:"";
+    display: block;
+    height:0;
+    line-height: 0;
+     clear:both;
+    visibility: hidden;
+}

@@ -1,0 +1,43 @@
+//@import "./color.less";
+#product{
+  //background-color: red;
+  #product-list{
+    display: flex;
+    flex-wrap: wrap;
+
+    .product-item{
+      height: 280px;
+      width: 50%;
+      padding-left: 10px;
+      text-align: center;
+      img{
+        width: 140px;
+        height: 140px;
+
+      }
+      .product-name{
+        text-align: left;
+        font-size: 16px;
+      }
+      .product-price{
+        text-align: left;
+        color:red;
+        font-size: 20px;
+      }
+      .from-time{
+        text-align: left;
+      }
+    }
+
+  }
+  #loading-info{
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 10px;
+
+    img{
+      width: 35px;
+      height: 35px;
+    }
+  }
+}

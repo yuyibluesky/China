@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="./css/common_section.less"/>
+    <link rel="stylesheet/less" href="./css/inlanddiscount.less"/>
+    <script src="./lib/less/less.js"></script>
+    <script src="./lib/html5shiv/html5shiv.min.js"></script>
+    <script src="./lib/respond/respond.js"></script>
+</head>
+<script type='text/html' id='discountlist'>
+        {{each result as value i}}
+
+        <div class='product-item'>
+            <!--<img src="./images/product_info.jpg" alt=""/>-->
+            {{# value.productImg}}
+            <div class='product-name'>{{value.productName}}</div>
+            <div class='product-price'>{{value.productPrice}}</div>
+            <div class='from-time'>{{value.productTime}}</div>
+        </div>
+        {{/each}}
+</script>
+
+<body>
+<header  id=header>
+
+</header>
+<section id="search">
+
+</section>
+
+<section id="product">
+    <div id='product-list'>
+        <!--<div class='product-item'>-->
+            <!--<img src="./images/product_info.jpg" alt=""/>-->
+            <!--<div class='product-name'>商品名称</div>-->
+            <!--<div class='product-price'>商品价格</div>-->
+            <!--<div class='from-time'>2017-12-12</div>-->
+        <!--</div>-->
+        <!-- -->
+        
+    </div>
+    <div id='loading-info'>
+        <img src="./images/loading.gif" alt=""/>
+        <div id='loading'></div>
+    </div>
+
+
+</section>
+<footer id="footer">
+</footer>
+
+
+</body>
+<script src='./lib/jquery/jquery.min.js'></script>
+<script src='./lib/template/template.js'></script>
+<script src='./js/common_section.js'></script>
+<script src='./js/inlanddiscount.js'></script>
+
+</html>

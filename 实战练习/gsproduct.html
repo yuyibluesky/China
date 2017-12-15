@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>凑单品</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="./css/common_section.less"/>
+    <link rel="stylesheet/less" href="./css/jsproduct.less"/>
+    <script src="./lib/less/less.js"></script>
+    <script src="./lib/html5shiv/html5shiv.min.js"></script>
+    <script src="./lib/respond/respond.js"></script>
+</head>
+
+<body>
+<header  id=header>
+    <!--<a href="#" class="header-logo">-->
+    <!--<img src="images/header_logo.png" alt=""/>-->
+    <!--</a>-->
+    <!--<a href="#" class="header-app">-->
+    <!--<img src="images/header_app.png" alt=""/>-->
+    <!--</a>-->
+</header>
+<section id="search">
+    <!--<form action="">-->
+    <!--<input type="search" placeholder="请输入要查询的商品名称" required/><span></span>-->
+    <!--<button value="搜索">搜索</button>-->
+    <!--</form>-->
+</section>
+
+<script type='text/html' id='shop-id-tpl'>
+    {{each result as value i}}
+    <a data-shopname-id={{value.shopId}} href="#">{{value.shopName}}</a>
+    {{/each}}
+</script>
+<script type='text/html' id='area-id-tpl'>
+    {{each result as value i}}
+    <a data-areaname-id={{value.areaId}} href="#">{{value.areaName}}</a>
+    {{/each}}
+</script>
+<section id="product">
+    <div class="filter">
+        <div class="filter-name">
+            <a class="shop" href="#">店铺</a>
+            <a class="area" href="#">地区</a>
+        </div>
+        <div class="shop-content">
+            <!--<a href="#">taobao</a>-->
+            <!--<a href="#">jingdong</a>-->
+            <!--<a href="#">yihaodian</a>-->
+
+        </div>
+        <div class="area-content">
+            <!--<a href="#">huann</a>-->
+            <!--<a href="#">xian</a>-->
+            <!--<a href="#">wihan</a>-->
+            <!--<a href="#">hunan</a>-->
+        </div>
+    </div>
+    <div class="product-list">
+
+    </div>
+</section>
+
+<footer id="footer">
+    <!--<div class="footer-title">-->
+    <!--<a href="#">登录</a>-->
+    <!--<a href="#">注册</a>-->
+    <!--<a class='backTop' href="javascript:goTop()">返回顶部</a>-->
+    <!--</div>-->
+    <!--<div class="footer-msg">-->
+    <!--<a href="#"><span>手机APP下载</span>慢慢买手机版-掌上比价平台 </a><br/>-->
+    <!--<a href="#">m.manmanbuy.com</a>-->
+    <!--</div>-->
+</footer>
+
+
+</body>
+<script src='./lib/jquery/jquery.min.js'></script>
+<script src='./lib/template/template.js'></script>
+<script src='./js/common_section.js'></script>
+<script src='./js/jsproduct.js'></script>
+
+</html>

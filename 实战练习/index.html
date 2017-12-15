@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<script  type="text/html" id="tete">
+	{{each result as value i}}
+			<p>{{value.name}}</p>
+	{{/each}}
+</script>
+<body><div class='content'></div></body>
+<!--<head>-->
+	<!--<meta charset="UTF-8">-->
+	 <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+	<!--<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+	<!--<title>慢慢买</title>-->
+
+	<!--&lt;!&ndash;<link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">&ndash;&gt;-->
+
+	<!--&lt;!&ndash;<link rel="stylesheet/less" href="./css/index.less"/>&ndash;&gt;-->
+
+
+	<!--&lt;!&ndash;<script src="./lib/less/less.js"></script>&ndash;&gt;-->
+	<!--&lt;!&ndash;<script src="./lib/html5shiv/html5shiv.min.js"></script>&ndash;&gt;-->
+	 <!--&lt;!&ndash;<script src="./lib/respond/respond.js"></script>&ndash;&gt;-->
+
+
+
+
+<!--</head>-->
+<!--<body>-->
+
+	<!--&lt;!&ndash;<header id=header>&ndash;&gt;-->
+		<!--&lt;!&ndash;<a href="#" class="header-logo">&ndash;&gt;-->
+			<!--&lt;!&ndash;<img src="images/header_logo.png" alt=""/>&ndash;&gt;-->
+		<!--&lt;!&ndash;</a>&ndash;&gt;-->
+		<!--&lt;!&ndash;<a href="#" class="header-app">&ndash;&gt;-->
+			<!--&lt;!&ndash;<img src="images/header_app.png" alt=""/>&ndash;&gt;-->
+		<!--&lt;!&ndash;</a>&ndash;&gt;-->
+	<!--&lt;!&ndash;</header>&ndash;&gt;-->
+	<!--&lt;!&ndash;<section id="search">&ndash;&gt;-->
+		<!--&lt;!&ndash;<form action="">&ndash;&gt;-->
+			<!--&lt;!&ndash;<input type="search" placeholder="请输入要查询的商品名称" required/><span></span>&ndash;&gt;-->
+			<!--&lt;!&ndash;<button value="搜索">搜索</button>&ndash;&gt;-->
+		<!--&lt;!&ndash;</form>&ndash;&gt;-->
+	<!--&lt;!&ndash;</section>&ndash;&gt;-->
+	<!--&lt;!&ndash;<section id="menu">&ndash;&gt;-->
+		<!--&lt;!&ndash;<div class="container">&ndash;&gt;-->
+			<!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+				<!--&lt;!&ndash;<ul>&ndash;&gt;-->
+					<!--&lt;!&ndash;<li class="col-xs-3" >&ndash;&gt;-->
+						<!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+							<!--&lt;!&ndash;<img src="images/ic_search.png" alt=""/>&ndash;&gt;-->
+							<!--&lt;!&ndash;<span>比价搜索</span>&ndash;&gt;-->
+
+						<!--&lt;!&ndash;</a>&ndash;&gt;-->
+					<!--&lt;!&ndash;</li>&ndash;&gt;-->
+					<!--&lt;!&ndash;<li class="col-xs-3">&ndash;&gt;-->
+						<!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+							<!--&lt;!&ndash;<img src="images/ic_cu.png" alt=""/>&ndash;&gt;-->
+							<!--&lt;!&ndash;<span>省钱控</span>&ndash;&gt;-->
+						<!--&lt;!&ndash;</a>&ndash;&gt;-->
+					<!--&lt;!&ndash;</li>&ndash;&gt;-->
+					<!--&lt;!&ndash;<li class="col-xs-3">&ndash;&gt;-->
+						<!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+							<!--&lt;!&ndash;<img src="images/ic_coudanpin.png" alt=""/>&ndash;&gt;-->
+							<!--&lt;!&ndash;<span>国内折扣</span>&ndash;&gt;-->
+						<!--&lt;!&ndash;</a>&ndash;&gt;-->
+					<!--&lt;!&ndash;</li>&ndash;&gt;-->
+					<!--&lt;!&ndash;<li class="col-xs-3">&ndash;&gt;-->
+						<!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+							<!--&lt;!&ndash;<img src="images/ic_bcj.png" alt=""/>&ndash;&gt;-->
+							<!--&lt;!&ndash;<span>白菜价</span>&ndash;&gt;-->
+						<!--&lt;!&ndash;</a>&ndash;&gt;-->
+					<!--&lt;!&ndash;</li>&ndash;&gt;-->
+					<!--&lt;!&ndash;<li class="col-xs-3">&ndash;&gt;-->
+						<!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+							<!--&lt;!&ndash;<img src="images/haitao.png" alt=""/>&ndash;&gt;-->
+							<!--&lt;!&ndash;<span>海淘折扣</span>&ndash;&gt;-->
+						<!--&lt;!&ndash;</a>&ndash;&gt;-->
+					<!--&lt;!&ndash;</li>&ndash;&gt;-->
+					<!--&lt;!&ndash;<li class="col-xs-3">&ndash;&gt;-->
+						<!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+							<!--&lt;!&ndash;<img src="images/ic_bcj.png" alt=""/>&ndash;&gt;-->
+							<!--&lt;!&ndash;<span>小时风云榜</span>&ndash;&gt;-->
+						<!--&lt;!&ndash;</a>&ndash;&gt;-->
+					<!--&lt;!&ndash;</li>&ndash;&gt;-->
+					<!--&lt;!&ndash;<li class="col-xs-3">&ndash;&gt;-->
+						<!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+							<!--&lt;!&ndash;<img src="images/ic_trend.png" alt=""/>&ndash;&gt;-->
+							<!--&lt;!&ndash;<span>历史查价</span>&ndash;&gt;-->
+						<!--&lt;!&ndash;</a>&ndash;&gt;-->
+					<!--&lt;!&ndash;</li>&ndash;&gt;-->
+					<!--&lt;!&ndash;<li class="col-xs-3">&ndash;&gt;-->
+						<!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+							<!--&lt;!&ndash;<img src="images/gengduo.png" alt=""/>&ndash;&gt;-->
+							<!--&lt;!&ndash;<span>更多</span>&ndash;&gt;-->
+						<!--&lt;!&ndash;</a>&ndash;&gt;-->
+					<!--&lt;!&ndash;</li>&ndash;&gt;-->
+					<!--&lt;!&ndash;<li class="col-xs-3">&ndash;&gt;-->
+
+						<!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+							<!--&lt;!&ndash;<img src="images/ic_kb.png" alt=""/>&ndash;&gt;-->
+							<!--&lt;!&ndash;<span>smail</span>&ndash;&gt;-->
+						<!--&lt;!&ndash;</a>&ndash;&gt;-->
+					<!--&lt;!&ndash;</li>&ndash;&gt;-->
+					<!--&lt;!&ndash;<li class="col-xs-3">&ndash;&gt;-->
+						<!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+							<!--&lt;!&ndash;<img src="images/ic_pp.png" alt=""/>&ndash;&gt;-->
+
+							<!--&lt;!&ndash;<span>品质</span>&ndash;&gt;-->
+						<!--&lt;!&ndash;</a>&ndash;&gt;-->
+					<!--&lt;!&ndash;</li>&ndash;&gt;-->
+					<!--&lt;!&ndash;<li class="col-xs-3">&ndash;&gt;-->
+						<!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+							<!--&lt;!&ndash;<img src="images/ic_temai.png" alt=""/>&ndash;&gt;-->
+							<!--&lt;!&ndash;<span>特卖</span>&ndash;&gt;-->
+						<!--&lt;!&ndash;</a>&ndash;&gt;-->
+					<!--&lt;!&ndash;</li>&ndash;&gt;-->
+				<!--&lt;!&ndash;</ul>&ndash;&gt;-->
+			<!--&lt;!&ndash;</div>&ndash;&gt;-->
+		<!--&lt;!&ndash;</div>&ndash;&gt;-->
+	<!--&lt;!&ndash;</section>&ndash;&gt;-->
+	<!--&lt;!&ndash;<section id="recommend">&ndash;&gt;-->
+		<!--&lt;!&ndash;<div class="recommend-title">&ndash;&gt;-->
+			<!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+				<!--&lt;!&ndash;超值折扣推荐&ndash;&gt;-->
+			<!--&lt;!&ndash;</a>&ndash;&gt;-->
+		<!--&lt;!&ndash;</div>&ndash;&gt;-->
+		<!--&lt;!&ndash;<div class="recommend-content">&ndash;&gt;-->
+			<!--&lt;!&ndash;<div class="media">&ndash;&gt;-->
+				<!--&lt;!&ndash;<div class="media-left">&ndash;&gt;-->
+					<!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+						<!--&lt;!&ndash;<img class="media-object" src="./images/product_info.jpg" alt="...">&ndash;&gt;-->
+					<!--&lt;!&ndash;</a>&ndash;&gt;-->
+				<!--&lt;!&ndash;</div>&ndash;&gt;-->
+				<!--&lt;!&ndash;<div class="media-body" class="clearfix">&ndash;&gt;-->
+					<!--&lt;!&ndash;<span>超值液晶电视</span>&ndash;&gt;-->
+					<!--&lt;!&ndash;<span class="nicePrice">5000包邮(26-10-17)</span>&ndash;&gt;-->
+					<!--&lt;!&ndash;<a href="#">天猫旗舰店|10-26 14:15</a>&ndash;&gt;-->
+				<!--&lt;!&ndash;</div>&ndash;&gt;-->
+			<!--&lt;!&ndash;</div>&ndash;&gt;-->
+			<!--&lt;!&ndash;<div class="media">&ndash;&gt;-->
+				<!--&lt;!&ndash;<div class="media-left">&ndash;&gt;-->
+					<!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+						<!--&lt;!&ndash;<img class="media-object" src="./images/product_info.jpg" alt="...">&ndash;&gt;-->
+					<!--&lt;!&ndash;</a>&ndash;&gt;-->
+				<!--&lt;!&ndash;</div>&ndash;&gt;-->
+				<!--&lt;!&ndash;<div class="media-body" class="clearfix">&ndash;&gt;-->
+					<!--&lt;!&ndash;<span>超值液晶电视</span>&ndash;&gt;-->
+					<!--&lt;!&ndash;<span class="nicePrice">5000包邮(26-10-17)</span>&ndash;&gt;-->
+					<!--&lt;!&ndash;<a href="#">天猫旗舰店|10-26 14:15</a>&ndash;&gt;-->
+				<!--&lt;!&ndash;</div>&ndash;&gt;-->
+			<!--&lt;!&ndash;</div>&ndash;&gt;-->
+			<!--&lt;!&ndash;<div class="media">&ndash;&gt;-->
+				<!--&lt;!&ndash;<div class="media-left">&ndash;&gt;-->
+					<!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+						<!--&lt;!&ndash;<img class="media-object" src="./images/product_info.jpg" alt="...">&ndash;&gt;-->
+					<!--&lt;!&ndash;</a>&ndash;&gt;-->
+				<!--&lt;!&ndash;</div>&ndash;&gt;-->
+				<!--&lt;!&ndash;<div class="media-body" class="clearfix">&ndash;&gt;-->
+					<!--&lt;!&ndash;<span>超值液晶电视</span>&ndash;&gt;-->
+					<!--&lt;!&ndash;<span class="nicePrice">5000包邮(26-10-17)</span>&ndash;&gt;-->
+					<!--&lt;!&ndash;<a href="#">天猫旗舰店|10-26 14:15</a>&ndash;&gt;-->
+				<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+			<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+		<!--&lt;!&ndash;</div>&ndash;&gt;-->
+		<!--&lt;!&ndash;<div class="recommend-more">&ndash;&gt;-->
+
+			<!--&lt;!&ndash;<a href="#">更多优惠信息>></a>&ndash;&gt;-->
+
+		<!--&lt;!&ndash;</div>&ndash;&gt;-->
+		<!--&lt;!&ndash;<div class="recommend-title">&ndash;&gt;-->
+			<!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+				<!--&lt;!&ndash;品牌排行&ndash;&gt;-->
+			<!--&lt;!&ndash;</a>&ndash;&gt;-->
+		<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+	<!--&lt;!&ndash;</section>&ndash;&gt;-->
+	<!--&lt;!&ndash;<footer id="footer">&ndash;&gt;-->
+		<!--&lt;!&ndash;<div class="footer-title">&ndash;&gt;-->
+			<!--&lt;!&ndash;<a href="#">登录</a>&ndash;&gt;-->
+			<!--&lt;!&ndash;<a href="#">注册</a>&ndash;&gt;-->
+			<!--&lt;!&ndash;<a href="#">返回顶部</a>&ndash;&gt;-->
+		<!--&lt;!&ndash;</div>&ndash;&gt;-->
+		<!--&lt;!&ndash;<div class="footer-msg">&ndash;&gt;-->
+			<!--&lt;!&ndash;<a href="#"><span>手机APP下载</span>慢慢买手机版-掌上比价平台 </a><br/>&ndash;&gt;-->
+			<!--&lt;!&ndash;<a href="#">m.manmanbuy.com</a>&ndash;&gt;-->
+		<!--&lt;!&ndash;</div>&ndash;&gt;-->
+	<!--&lt;!&ndash;</footer>&ndash;&gt;-->
+
+<!--</body>-->
+<script src="./lib/jquery/jquery.js"></script>
+<!--<script src="./lib/bootstrap/js/bootstrap.min.js"></script>-->
+<scirpt src="./lib/template/template.js"></scirpt>
+<!--<script src="./js/index.js"></script>-->
+<script>
+	$.ajax({
+		type:"get",
+		url:"http://127.0.0.1:3000/api/getindexmenu",
+		dataType:"json",
+		success:function(data) {
+			var mas=template('tete',data)
+			$(".content").html(mas)
+//            console.log(mas);
+		}
+	})
+</script>
+
+
+
+</html>
